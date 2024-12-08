@@ -89,6 +89,7 @@ header {
 
     .hamburger-menu {
         display: block;
+        padding: 0 10%;
     }
 
     .logo {
