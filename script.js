@@ -1,8 +1,12 @@
-function toggleMenu() {
-    const menu = document.getElementById('mobile-menu');
-    menu.classList.toggle('active');
-}
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('.menu');
 
-document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('hamburger-menu').addEventListener('click', toggleMenu);
-});
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active")
+    menu.classList.toggle("active")
+})
+
+document.querySelectorAll(".menu a").forEach(n => n.addEventListener("click", () => {
+    hamburger.classList.remove("active")
+    menu.classList.remove("active")
+}))
