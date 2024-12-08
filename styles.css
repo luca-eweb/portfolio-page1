@@ -20,6 +20,20 @@ header {
     padding: 10px;
 }
 
+.logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    max-width: 100%;
+    width: 150px;
+    height: auto;
+    transition: width 0.3s ease;
+}
+
 .menu {
     display: flex;
     gap: 15px;
@@ -77,14 +91,13 @@ header {
         display: block;
     }
 
+    .logo {
+        width: 100px;
+    }
+
     .menu {
         display: none;
     }
-}
-
-.img-header{
-    width: 50%;
-    
 }
 
 main {
