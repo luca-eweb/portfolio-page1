@@ -108,6 +108,10 @@ header {
     .menu {
         display: none;
     }
+
+    .mobile-menu.active {
+        display: block;
+    }
 }
 
 main {
