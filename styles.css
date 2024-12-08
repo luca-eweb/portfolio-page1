@@ -21,13 +21,52 @@ header {
     background-color: black;
 }
 
-.section {
-    flex: 1;
-    padding: 20px;
-    background-color: #cce7ff;
+.menu {
+    display: flex;
+    gap: 15px;
+}
+
+.menu p {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu p:hover {
+    background-color: #ddd;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
     text-align: center;
-    border: 1px solid #888;
-    margin: 0 5px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;      /* Container vertikal ausrichten */
+        align-items: center;         /* Zentrierung der Abschnitte */
+    }
+
+    .menu {
+        flex-direction: column;      /* Menü-Links untereinander anordnen */
+        align-items: center;         /* Links zentrieren */
+        gap: 10px;                   /* Abstand zwischen den Links verringern */
+    }
+
+    .menu p {
+        font-size: 16px;             /* Kleinere Schriftgröße */
+        padding: 10px;               /* Größerer Klickbereich */
+        width: 100%;                 /* Links füllen die Breite */
+        text-align: center;          /* Text zentriert */
+    }
+
+    .logo {
+        margin: 20px 0;              /* Abstand um das Logo */
+    }
 }
 
 nav {
