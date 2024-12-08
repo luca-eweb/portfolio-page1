@@ -7,22 +7,27 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
     color: white;
     text-align: center;
     padding: 20px 0;
 }
 
-.header {
+.container-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    opacity: 0;
+    gap: 10px;
+    padding: 10px;
+    background-color: black;
+}
+
+.section {
+    flex: 1;
+    padding: 20px;
+    background-color: #cce7ff;
+    text-align: center;
+    border: 1px solid #888;
+    margin: 0 5px;
 }
 
 nav {
