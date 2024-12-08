@@ -10,29 +10,63 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container-header">
-            <div class="menu">
-                <a href="#Projekte">Projekte</a>
-                <a href="#Über mich">Über mich</a>
-            </div>
-            <div class="logo-header">
-                <div class="logo-container">
-                    <img src="img/Logo.png" alt="Logo" class="logo">
-                </div>
-                Luca Lüdi
-            </div>
-            <div class="menu">
-                <a href="#Instagram">Instagram</a>
-                <a href="#LinkedIN">LinkedIN</a>
-            </div>
-            <div class="hamburger" id="hamburger-menu" onclick="toggleMenu()">
-                &#9776;
-                <span class="bar">Projekte</a>
-                <span class="bar">Über mich</a>
-                <span class="bar">Instagram</a>
-                <span class="bar">LinkedIN</a>
-            </div>
+    <div class="menu-container">
+        <button class="menu-burger hamburger" type="button">
+          <span class="hamburger-inner"></span>
+        </button>
+        <nav class="menu">
+            <ul class="main-menu">
+                <li class="item selected">
+                    <a href="/work" >Work</a>
+                </li>
+                <li class="category">
+                    <a>Info</a>
+                    <ul class="category-list category-list-hidden">
+                        <li class="item">
+                            <a href="/bio">
+                                Bio
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="/blog">
+                                Blog
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a href="/contact">
+                                Contact
+                            </a>
+                        </li>
+                                
+                    </ul>
+                </li>
+                <li class="overlay-social">
+                    <nav class="social">
+                        <a href="http://instagram.com/useformat" class="social-link" target="_blank" title="Instagram">
+                            Instagram
+                        </a>
+                        <a href="http://facebook.com/useformat" class="social-link" target="_blank" title="Facebook">
+                            Facebook
+                        </a>
+                    </nav>
+                </li>
+            </ul>
+        </nav>
+        </div>
+          <div class="header__item logo is-image">
+              <a href="/">
+                <img class="ignore-image-protection" src="img/Logo.png" alt="Logo"/>
+              </a>
+          </div>
+        <div class="header-social">
+          <nav class="social">    
+            <a href="http://instagram.com/" class="social-link" target="_blank" title="Instagram">
+                Instagram
+            </a>
+            <a href="http://facebook.com/useformat" class="social-link" target="_blank" title="Facebook">
+                Facebook
+            </a>
+        </nav>
         </div>
     </header>
     <main>
