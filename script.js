@@ -1,9 +1,7 @@
-const navEls = document.querySelectorAll(".nav"); // Alle Navigationselemente auswählen
+const navEls = document.querySelectorAll(".nav");
 const hamburgerEl = document.querySelector(".hamburger");
 
-// Überprüfen, ob hamburgerEl und navEls existieren
 if (hamburgerEl && navEls.length > 0) {
-    // Hamburger-Menü öffnen/schließen
     hamburgerEl.addEventListener("click", () => {
         navEls.forEach(navEl => {
             navEl.classList.toggle("nav--open");
@@ -11,21 +9,25 @@ if (hamburgerEl && navEls.length > 0) {
         hamburgerEl.classList.toggle("hamburger--open");
     });
 
-    // Menü schließen, wenn auf eines der nav-Elemente geklickt wird
     navEls.forEach(navEl => {
         navEl.addEventListener("click", () => {
-            navEls.forEach(el => el.classList.remove("nav--open")); // Alle .nav schließen
+            navEls.forEach(el => el.classList.remove("nav--open"));
             hamburgerEl.classList.remove("hamburger--open");
         });
     });
 
-    // Menü schließen beim Scrollen
+    document.addEventListener("click", (event) => {
+        if (!hamburgerEl.contains(event.target) && !Array.from(navEls).some(navEl => navEl.contains(event.target))) {
+            navEls.forEach(navEl => navEl.classList.remove("nav--open"));
+            hamburgerEl.classList.remove("hamburger--open");
+        }
+    });
+
     $(window).scroll(function () {
-        navEls.forEach(navEl => navEl.classList.remove("nav--open")); // Alle .nav schließen
+        navEls.forEach(navEl => navEl.classList.remove("nav--open"));
         hamburgerEl.classList.remove("hamburger--open");
     });
 
-    // Header-Transparenz basierend auf Scroll-Position ändern
     $(window).scroll(function () {
         if ($(window).scrollTop() === 0) {
             $('header').css('opacity', '1');
