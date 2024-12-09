@@ -28,10 +28,6 @@ body {
     transition: opacity 0.3s ease-in-out;
 }
 
-.main {
-    margin-top: 50px;
-}
-
 .header__content {
     display: flex;
     align-items: center;
@@ -87,7 +83,6 @@ body {
 
 .nav--open {
     transform: translate(0) !important;
-
 }
 
 .hamburger--open .bar:nth-child(1) {
@@ -125,3 +120,10 @@ body {
     }
 }
 
+.main {
+    margin-top: 50px;
+}
+
+.footer {
+    bottom: 0px;
+}
