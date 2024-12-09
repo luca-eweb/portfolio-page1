@@ -25,6 +25,7 @@ body {
     position: fixed;
     width: 100%;
     top: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .main {
@@ -99,10 +100,6 @@ body {
 
 .hamburger--open .bar:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
-}
-
-.header--transparent {
-    opacity: 0.4;
 }
 
 @media (max-width: 768px) {
