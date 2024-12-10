@@ -38,14 +38,22 @@ if (hamburgerEl && navEls.length > 0) {
 } else {
     console.error("Hamburger oder Navigationselemente nicht gefunden.");
 }
+const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+const apiUrl = 'https://zenquotes.io/api/random';
 
-const api_url ="https://zenquotes.io/api/quotes/";
-
-async function getapi(url)
-{
-  const response = await fetch(url);
-  var data = await response.json();
-  console.log(data);
+async function loadQuote() {
+    const url = proxyUrl + apiUrl; // Kombinierte URL mit Proxy
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        const quote = data[0]; // Die API liefert ein Array, daher Zugriff auf das erste Element
+        document.querySelector('.quote').innerText = `"${quote.q}"`; // q = Zitat
+        document.querySelector('.author').innerText = `– ${quote.a}`; // a = Autor
+    } catch (error) {
+        console.error('Fehler beim Abrufen des Zitats:', error);
+        document.querySelector('.quote').innerText = 'Fehler beim Laden eines neuen Zitats.';
+        document.querySelector('.author').innerText = '';
+    }
 }
 
-getapi(api_url);
+loadQuote();
