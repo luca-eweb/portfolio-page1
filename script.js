@@ -40,7 +40,13 @@ if (hamburgerEl && navEls.length > 0) {
 }
 
 async function loadQuote() {
-    const url = 'https://zenquotes.io/api/random';
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+    const apiUrl = 'https://zenquotes.io/api/random';
+    const url = proxyUrl + apiUrl;
+
+    document.querySelector('.quote').innerText = 'Lade ein Zitat...';
+    document.querySelector('.author').innerText = '';
+
     try {
         const response = await fetch(url);
         const data = await response.json();
@@ -54,4 +60,5 @@ async function loadQuote() {
     }
 }
 
+// Aufruf der Funktion beim Laden der Seite
 loadQuote();

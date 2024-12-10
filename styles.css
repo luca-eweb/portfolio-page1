@@ -177,6 +177,9 @@ main {
         align-items: baseline;
         justify-content: normal;
     }
+    .main__flex--bar {
+        
+    }
 }
 
 footer {
