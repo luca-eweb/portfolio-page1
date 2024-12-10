@@ -38,3 +38,20 @@ if (hamburgerEl && navEls.length > 0) {
 } else {
     console.error("Hamburger oder Navigationselemente nicht gefunden.");
 }
+
+async function loadQuote() {
+    const url = 'https://zenquotes.io/api/random';
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        const quote = data[0];
+        document.querySelector('.quote').innerText = `"${quote.q}"`;
+        document.querySelector('.author').innerText = `– ${quote.a}`;
+    } catch (error) {
+        console.error('Fehler beim Abrufen des Zitats:', error);
+        document.querySelector('.quote').innerText = 'Fehler beim Laden eines neuen Zitats.';
+        document.querySelector('.author').innerText = '';
+    }
+}
+
+loadQuote();

@@ -123,11 +123,23 @@ main {
     color: white;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
     padding: 0 30px;
     gap: 20px;
     height: 100%;
+    text-align: center;
+}
+
+.main__flex {
+    margin-top: 10%;
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+}
+
+.main__flex--bar {
+    flex-basis: 100%;
+    background-color: bisque;
 }
 
 @media (max-width: 768px) {
@@ -163,7 +175,7 @@ main {
     .main__content {
         flex-direction: column;
         align-items: baseline;
-        justify-content: space-around;
+        justify-content: normal;
     }
 }
 
