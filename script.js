@@ -33,10 +33,8 @@ if (hamburgerEl && navEls.length > 0) {
     $(window).scroll(function () {
         if ($(window).scrollTop() === 0) {
             $('header').css('opacity', '1');
-            $('header .logo').css('display', 'block');
         } else {
             $('header').css('opacity', '.1');
-            $('header .logo').css('display', 'none');
         }
 
         clearTimeout(scrollTimeout);
