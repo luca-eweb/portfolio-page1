@@ -28,13 +28,24 @@ if (hamburgerEl && navEls.length > 0) {
         hamburgerEl.classList.remove("hamburger--open");
     });
 
+    let scrollTimeout;
+
     $(window).scroll(function () {
         if ($(window).scrollTop() === 0) {
             $('header').css('opacity', '1');
+            $('header .logo').css('display', 'block');
         } else {
-            $('header').css('opacity', '.4');
+            $('header').css('opacity', '.1');
+            $('header .logo').css('display', 'none');
         }
+
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(function () {
+            $('header').css('opacity', '1');
+            $('header .logo').css('display', 'block');
+        }, 200);
     });
+
 } else {
     console.error("Hamburger oder Navigationselemente nicht gefunden.");
 }
