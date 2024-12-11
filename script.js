@@ -47,22 +47,31 @@ if (hamburgerEl && navEls.length > 0) {
 } else {
     console.error("Hamburger oder Navigationselemente nicht gefunden.");
 }
-const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-const apiUrl = 'https://zenquotes.io/api/random';
-
 async function loadQuote() {
-    const url = proxyUrl + apiUrl; // Kombinierte URL mit Proxy
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-        const quote = data[0]; // Die API liefert ein Array, daher Zugriff auf das erste Element
-        document.querySelector('.quote').innerText = `"${quote.q}"`; // q = Zitat
-        document.querySelector('.author').innerText = `– ${quote.a}`; // a = Autor
-    } catch (error) {
-        console.error('Fehler beim Abrufen des Zitats:', error);
-        document.querySelector('.quote').innerText = 'Fehler beim Laden eines neuen Zitats.';
-        document.querySelector('.author').innerText = '';
-    }
+    var category = 'life';
+    $.ajax({
+        method: 'GET',
+        url: 'https://api.api-ninjas.com/v1/quotes?category=' + category,
+        headers: { 'X-Api-Key': 'A7RWGVf4gAGPHgJuhxhn5w==pf5e8ccn2zrSyo2Y' },
+        contentType: 'application/json',
+        success: function (result) {
+            if (result && result.length > 0) {
+                $('.quote').text('"' + result[0].quote + '"');
+                $('.author').text('- ' + result[0].author);
+
+            } else {
+                $('.quote').text('Kein Zitat gefunden.');
+                $('.author').text('');
+            }
+        },
+        error: function ajaxError(jqXHR) {
+            console.error('Error: ', jqXHR.responseText);
+            $('.quote').text('Fehler beim Laden des Zitats.');
+            $('.author').text('');
+        }
+    });
 }
 
-loadQuote();
+$(document).ready(function () {
+    loadQuote();
+});
