@@ -41,7 +41,7 @@ if (hamburgerEl && navEls.length > 0) {
         scrollTimeout = setTimeout(function () {
             $('header').css('opacity', '1');
             $('header .logo').css('display', 'block');
-        }, 1000);
+        }, 500);
     });
 
 } else {
