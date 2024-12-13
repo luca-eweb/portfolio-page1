@@ -52,7 +52,7 @@ async function loadQuote() {
     $.ajax({
         method: 'GET',
         url: 'https://api.api-ninjas.com/v1/quotes?category=' + category,
-        headers: { 'X-Api-Key': 'A7RWGVf4gAGPHgJuhxhn5w==pf5e8ccn2zrSyo2Y' },
+        headers: { 'X-Api-Key': MY_SECRET },
         contentType: 'application/json',
         success: function (result) {
             if (result && result.length > 0) {
