@@ -143,6 +143,21 @@ main {
     min-height: 100vh;
 }
 
+.top__content {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    gap: 10px;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.top__flex {
+    height: 200px;
+    width: 40%;
+}
+
 .main__content {
     color: white;
     display: flex;
@@ -206,6 +221,11 @@ main {
         margin-right: auto;
         width: 100%;
     }
+
+    .top {
+        display: flex;
+        flex-direction: column;
+    }
     .main {
         display: flex;
         flex-direction: column;
@@ -228,11 +248,12 @@ main {
         color: white;
     }
     .main__flex--bar {
-        order: 3;
+        order: 2;
         width: 100%;
     }
+
     .footer {
-        order: 3;
+        position: relative;
         bottom: 0;
     }
 }
