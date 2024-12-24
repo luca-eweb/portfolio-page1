@@ -87,7 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
         jokePopup.style.display = 'block';
         jokeOverlay.style.display = 'block';
 
-        // API Call für einen zufälligen Witz
         try {
             const response = await fetch('https://official-joke-api.appspot.com/random_joke');
             const data = await response.json();
@@ -97,13 +96,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Popup für Tabelle anzeigen
     window.showTablePopup = function() {
         document.getElementById('tablePopup').style.display = 'block';
         document.getElementById('tableOverlay').style.display = 'block';
     }
 
-    // Popups ausblenden (für beide)
     window.hidePopup = function(popupId, overlayId) {
         document.getElementById(popupId).style.display = 'none';
         document.getElementById(overlayId).style.display = 'none';
