@@ -19,9 +19,6 @@
     <script> console.log(`API Key ist: ${MY_SECRET}`); </script>
 </head>
 <body>
-    <div class="watermark">
-        <img src="img/Logo.png" alt="Logo" class="watermark">
-    </div>
     <header>
         <div class="header">
             <div class="header__content">
@@ -66,7 +63,6 @@
             </div>
         </div>
     </header>
-    
     <main>
         <div class="top">
             <div class="top__content">
@@ -84,16 +80,31 @@
                 <div class="top__flex">
                     <div class="top__flex__content">
                         <h1>Geschichte</h1>
-                        <h2>Beschreibung des Ortes</h2>
+                        <h2>Das Stadion Wankdorf hatte schon immer eine grosse Bedeutung in meinem Leben. 
+                            Was jedoch für mich der schönste Moment an diesem einzigartigen Ort ist, ist die Gründung des Alternativligateams "Pärkli Boys United".
+                            Seit der Gründung im Jahre 2018 haben wir mit Schweiss und Kampf den Ligaaufstieg gemeistert und kämpfen nun in der höchsten Liga um den Titel.
+                        </h2>
+                        <button onclick="showTablePopup()">Tabelle anzeigen</button>
+                        <div class="overlay" id="tableOverlay" onclick="hidePopup('tablePopup', 'tableOverlay')"></div>
+                        <div class="popup" id="tablePopup">
+                            <span class="close-btn" onclick="hidePopup('tablePopup', 'tableOverlay')">&times;</span>
+                            <iframe src="https://foul.ch/giele/tabelle/"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="main">
             <div class="main__content">
-                <div class="main__flex main--bar">
-                    <div class="main__flex__content">
-                        <h1>Whats up?</h1>
+                <div class="main__flex main--bar" id="popuphover">
+                    <div class="main__flex__content" id="popupTrigger" onclick="showJokePopup()">
+                        <h1>Whats up? Maybe it will be funny to klick on me :)</h1>
+                    </div>
+                    <div class="overlay" id="jokeOverlay" onclick="hidePopup('jokePopup', 'jokeOverlay')"></div>
+                    <div class="popup" id="jokePopup">
+                        <span class="close-btn" onclick="hidePopup('jokePopup', 'jokeOverlay')">&times;</span>
+                        <h2></h2>
+                        <p id="jokeText">Lade einen Witz...</p>
                     </div>
                 </div>
                 <div class="main__flex">
@@ -129,16 +140,12 @@
     <footer>
         <div class="footer">
             <div class="footer__content">
-                <div class="footer__left">
+                <div class="footer__flex">
                     <p>&copy; 2024, Portfolio Luca Lüdi</p>
                 </div>
-                <div class="footer__center">
+                <div class="footer__flex" id="kontakt">
                     <p>luca.luedi@mustermail.com</p>
                     <p>079 900 90 90</p>
-                </div>
-                <div class="footer__right">
-                    <p>Musterstrasse 90</p>
-                    <p>3000 Bern</p>
                 </div>
             </div>
         </div>
