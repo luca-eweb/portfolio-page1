@@ -8,6 +8,7 @@ html, body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    margin: 0;
 }
 
 *, *::before, *::after {
@@ -144,7 +145,7 @@ main {
     z-index: 2;
     position: relative;
     height: auto;
-    min-height: 100vh;
+    min-height: auto;
 }
 
 .top__content {
@@ -347,10 +348,11 @@ footer {
     }
 
     main {
+        flex: 1;
         z-index: 2;
         position: relative;
         height: auto;
-        min-height: 114%;
+        min-height: auto;
     }
 
     .main {
@@ -438,10 +440,11 @@ footer {
     }
 
     main {
+        flex: 1;
         z-index: 2;
         position: relative;
         height: auto;
-        min-height: 110%;
+        min-height: auto;
     }
 
     .main {
@@ -527,10 +530,11 @@ footer {
     }
 
     main {
+        flex: 1;
         z-index: 2;
         position: relative;
         height: auto;
-        min-height: 146%;
+        min-height: auto;
     }
 
     .main {
@@ -623,10 +627,11 @@ footer {
     }
 
     main {
+        flex: 1;
         z-index: 2;
         position: relative;
         height: auto;
-        min-height: 140%;
+        min-height: auto;
     }
 
     .main {
@@ -656,8 +661,8 @@ footer {
         order: 2;
         width: 100%;
     }
-    .footer{
-        margin-top: 50px;
+    footer {
+        margin-top: 100px;
     }
 }
 
