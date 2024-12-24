@@ -626,7 +626,7 @@ footer {
         z-index: 2;
         position: relative;
         height: auto;
-        min-height: 125%;
+        min-height: 140%;
     }
 
     .main {
