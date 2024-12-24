@@ -156,7 +156,7 @@ main {
     gap: 10px;
     padding: 0 30px;
     text-align: center;
-    height: 50%;
+    height: auto;
 }
 
 .top__flex {
@@ -473,9 +473,7 @@ footer {
         order: 2;
         width: 100%;
     }
-    .footer{
-        margin-top: 50px;
-    }
+
 }
 
 @media (max-width: 600px) {
@@ -563,9 +561,7 @@ footer {
         order: 2;
         width: 100%;
     }
-    .footer{
-        margin-top: 50px;
-    }
+
 }
 
 @media (max-width: 480px) {
@@ -661,16 +657,11 @@ footer {
         order: 2;
         width: 100%;
     }
-    footer {
-        margin-top: 100px;
-    }
 }
 
 
 @media (max-width: 768px) {
-    .footer{
-        margin-top: 50px;
-    }
+
     .footer__content {
         font-size: 10px;
     }
