@@ -626,7 +626,7 @@ footer {
         z-index: 2;
         position: relative;
         height: auto;
-        min-height: 120%;
+        min-height: 125%;
     }
 
     .main {
@@ -660,6 +660,7 @@ footer {
         margin-top: 50px;
     }
 }
+
 
 @media (max-width: 768px) {
     .footer{
